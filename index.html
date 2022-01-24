@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Indie+Flower&family=Josefin+Sans:ital,wght@0,400;1,300;1,400&family=Poppins:ital,wght@0,200;0,500;0,800;1,300&family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
@@ -14,7 +15,8 @@
     <section class="header">
         <nav>
             <a href="index.html"><img src="/assets/book-303927__340.webp" height="65px"></a>
-            <div class="nav__links">
+            <div class="nav__links" id="navLinks">
+                <i class="fas fa-times" onclick="hideMenu()"></i>
                 <ul>
                     <li>
                         <a href="home">HOME</a>
@@ -33,11 +35,31 @@
                     </li>
                 </ul>
             </div>
+            <i class="fas fa-bars" onclick="showMenu()"></i>
         </nav>
 
-        
+        <div class="text__box">
+            <h1>World's Biggest University</h1>
+            <p>Making website is now one of the easiest thing in the world. You just need to learn HTML, CSS, <br> Javascript and you are good to go.</p>
+            <a href="" class="hero__btn">Visit Us To know More</a>
+
+        </div>
 
     </section>
     
+                ------JavaScript------
+
+    <script>
+        var navLinks =document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+            
+        }
+    </script>
 </body>
 </html>
